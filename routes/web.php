@@ -37,6 +37,12 @@ Route::view('articles/index','articles/index');
 
 Route::get('/home', 'HomeController');//invokable
 Route::get('/home/show', 'HomeController@show');
+
+//urut sesuai method di PostController
+Route::get('/posts','PostController@index'); // model binding ke PK: ID
+Route::get('/posts/create','PostController@create'); //membuka form create
 //Route::get('/posts/{slug}','PostController@show'); //Route Wildcard
-//Route::get('/posts/{post:slug}','PostController@show'); // model binding ke slug
-Route::get('/posts/{post}','PostController@show'); // model binding ke PK: ID
+Route::get('/posts/{post:slug}','PostController@show'); // model binding ke slug
+//Route::get('/posts/{post}','PostController@show'); // model binding ke PK: ID
+Route::post('/posts/store','PostController@store'); // model binding ke slug
+

@@ -15,9 +15,9 @@
             <li class="nav-item">
                 <a class="nav-link {{request()->is('galeri')? 'active' : ''}}" href="/galeri">Galeri</a>
             </li>
-            <!-- <li class="nav-item">
-                <a class="nav-link {{request()->is('post')? 'active' : ''}}" href="/posts/show">Post</a>
-            </li> -->
+            <li class="nav-item">
+                <a class="nav-link {{request()->is('posts/1')? 'active' : ''}}" href="/posts">Post</a>
+            </li>
         </ul>
     </div>
 </nav>
